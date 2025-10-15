@@ -1,0 +1,15 @@
+// .sequelizerc
+// Este archivo le dice a Sequelize CLI dónde están nuestras carpetas personalizadas
+
+const path = require('path');
+
+module.exports = {
+  // Dónde está el archivo de configuración de la base de datos
+  'config': path.resolve('src', 'config', 'config.js'),
+  
+  // Dónde están los modelos
+  'models-path': path.resolve('src', 'models'),
+  
+  // Dónde están las migraciones
+  'migrations-path': path.resolve('src', 'migrations'),
+};
