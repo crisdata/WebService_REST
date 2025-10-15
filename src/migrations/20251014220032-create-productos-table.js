@@ -256,6 +256,6 @@ module.exports = {
   async down(queryInterface, Sequelize) {
     
     await queryInterface.dropTable('t_productos');
-    console.log('❌ Tabla t_productos eliminada');
+    console.log('❌ Tabla t_productos eliminadas');
   }
 };

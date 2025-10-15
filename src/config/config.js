@@ -15,7 +15,7 @@
 
 // Cargar dotenv PRIMERO antes de leer process.env
 // Esto asegura que las variables estén disponibles para Sequelize CLI
-require('dotenv').config();
+// require('dotenv').config();
 
 // ========================================================================
 // ESTRUCTURA DEL ARCHIVO
