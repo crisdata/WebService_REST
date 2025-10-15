@@ -67,11 +67,22 @@ app.get('/', (req, res) => {
 // ========================================================================
 // IMPORTAR Y USAR LAS RUTAS
 // ========================================================================
+// Importar el router de productos
+// Este router contiene todas las definiciones de rutas (GET, POST, PUT, DELETE)
 const productosRoutes = require('./routes/productos');
 
-// Montar las rutas en /api/productos
-// Ahora todas las rutas del router se acceden con este prefijo
-// Ejemplo: router.get('/') se convierte en GET /api/productos/
+// productosRoutes es el router que exportamos desde productos.js
+// Contiene 5 rutas:
+// - POST   /
+// - GET    /
+// - GET    /:id
+// - PUT    /:id
+// - DELETE /:id
+
+// ========================================================================
+// MONTAR EL ROUTER EN UN PATH BASE
+// ========================================================================
+// app.use() es un método de Express para registrar middlewares y routers
 app.use('/api/productos', productosRoutes);
 
 // ========================================================================
